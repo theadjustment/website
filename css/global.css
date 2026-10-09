@@ -1,0 +1,699 @@
+.hero-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(6.25rem, 15vh, 9.375rem) 5vw clamp(3rem, 8vh, 5rem) 5vw;
+  max-width: 82rem;
+  margin: 0 auto;
+  gap: clamp(1.875rem, 5vw, 3.75rem);
+}
+
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.disclaimer-notice {
+    background-color: var(--white);
+    border: 1px solid rgba(9, 84, 73, 0.15);
+    border-radius: 0.75rem;
+    padding: clamp(1.25rem, 3vw, 1.75rem);
+    margin: 0 auto clamp(2.5rem, 6vh, 4rem) auto;
+    max-width: 60rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.02);
+}
+
+.disclaimer-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-green);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+}
+
+.disclaimer-header .info-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--primary-green);
+    flex-shrink: 0;
+}
+
+.disclaimer-notice p {
+    margin: 0;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: #555;
+    line-height: 1.6;
+    text-wrap: pretty;
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  flex: 1;
+  max-width: clamp(20rem, 50vw, 42rem);
+}
+
+.hero-subtitle {
+  display: inline-block;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: clamp(0.75rem, 1.5vmin, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: clamp(0.5rem, 2vh, 0.9375rem);
+}
+
+.hero-content h1 {
+  color: var(--dark-green);
+  margin-top: 0;
+  margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
+  line-height: 0.73;
+  letter-spacing: -0.0625rem;
+  font-size: clamp(1.8rem, 3vw + 0.8rem, 2.8rem);
+  text-wrap: pretty;
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw + 0.8rem, 2rem);
+}
+
+.hero-content p {
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.15rem);
+  color: #555;
+  margin-bottom: 0;
+  line-height: 1.7;
+  max-width: min(100%, 55ch);
+}
+
+.hero-image-container {
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 1.25rem 2.5rem rgba(18, 78, 67, 0.08);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  background-color: #e0dcd3;
+}
+
+.clinic-book-btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: clamp(0.8rem, 2vh, 1rem) clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: clamp(1rem, 3vh, 1.875rem);
+  background-color: var(--primary-green);
+  color: var(--white);
+  border-radius: 0.5rem;
+  font-size: clamp(0.9rem, 2vw + 0.5rem, 1.125rem);
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: box-shadow 0.2s ease, color 0.2s ease;
+  -moz-transition: box-shadow 0.2s ease, color 0.2s ease;
+  transition: box-shadow 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.clinic-book-btn:hover {
+  box-shadow: inset 0 0 0 6.25rem rgba(255, 255, 255, 0.3);
+  color: var(--white);
+}
+
+.hero {
+  text-align: center;
+  padding: clamp(4rem, 12vh, 7.5rem) 5vw clamp(3rem, 10vh, 6.25rem) 5vw;
+  background-color: var(--white);
+  border-bottom: 0.125rem solid var(--bg-color); 
+}
+
+.hero h1 {
+  color: var(--dark-green);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: clamp(0.5rem, 2vh, 0.9375rem);
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  max-width: min(100%, 37.5rem);
+  margin: 0 auto clamp(1.25rem, 4vh, 1.875rem) auto;
+  color: #555;
+}
+
+.section {
+  padding: clamp(2.5rem, 8vh, 5rem) clamp(2vw, 5vmin, 5vw);
+  max-width: 82rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1921px), (min-height: 1100px) {
+  .hero-split {
+    padding-bottom: 6.5rem;
+  }
+  .section {
+    padding-top: 5.75rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.section-title {
+  color: var(--dark-green);
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 5vh, 2.5rem);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 2.5rem);
+  justify-content: center;
+}
+
+.service-card {
+  background-color: var(--white);
+  padding: clamp(1.25rem, 4vw, 1.875rem);
+  border-radius: 0.75rem;
+  text-align: center;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.02);
+  border-top: 3pt solid var(--primary-green);
+  width: 100%;
+  max-width: min(95vw, 28rem);
+  margin-inline: auto;
+}
+
+.service-card h3 {
+  color: var(--dark-green);
+  margin-bottom: 2.5ex;
+}
+
+.gallery-btn-container {
+  text-align: center;
+  margin-top: clamp(1.5rem, 5vh, 2.5rem);
+}
+
+#about {
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  padding: clamp(1rem, 3vw, 1.5rem) clamp(1.25rem, 5vw, 2.5rem) clamp(1.5rem, 5vw, 3.125rem);
+  margin: clamp(4rem, 12vh, 7.5rem) auto clamp(1.5rem, 5vh, 2.5rem) auto;
+  width: min(90vw, 56.25rem);
+  scroll-margin-top: clamp(5rem, 10vh, 7.5rem);
+  border-top: 3pt solid var(--primary-green);
+  box-sizing: border-box; 
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.03);
+}
+
+#about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#about .section-title {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  text-align: left;
+}
+
+.about-subtitle {
+  text-align: left;
+  color: var(--primary-green);
+  font-weight: 600;
+  margin-bottom: clamp(1rem, 3vh, 1.25rem); 
+  letter-spacing: 0.03125rem;
+}
+
+.about-content {
+  line-height: 1.8;
+  color: var(--text-dark);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+}
+
+.about-content p {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.about-content h3 {
+  color: var(--dark-green);
+  margin-top: clamp(1.5rem, 6vh, 2.8125rem);
+  margin-bottom: clamp(0.5rem, 2vh, 0.75rem);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+
+.bio-picture {
+  float: left;
+  width: clamp(85px, 12vw, 130px);
+  aspect-ratio: 3 / 4;
+  margin: 0.4rem 1.25rem 0.75rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.bio-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.location-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  background-color: var(--white);
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border-radius: 0.75rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: clamp(15rem, 40vw, 18.75rem);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+  margin-bottom: clamp(0.5rem, 2vh, 0.9375rem);
+}
+
+.contact-row svg {
+  width: 1.1875rem;
+  height: 1.1875rem;
+  fill: var(--dark-green);
+  flex-shrink: 0;
+}
+
+.contact-row a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-row a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.map-container {
+  flex: 1;
+  min-width: clamp(15rem, 40vw, 18.75rem);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  min-height: clamp(15rem, 40vh, 18.75rem);
+  border: 0;
+}
+
+footer {
+  background-color: var(--dark-green);
+  color: var(--white);
+  margin-top: clamp(1.5rem, 5vh, 2.5rem);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 82rem;
+  margin: 0 auto;
+  gap: clamp(1.25rem, 4vw, 1.875rem);
+}
+
+.footer-column {
+  flex: 1;
+  min-width: clamp(12rem, 30vw, 15.625rem);
+}
+
+.footer-column h3 {
+  color: var(--white);
+  margin-top: 0;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 0.75rem);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  width: fit-content;
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
+.social-links svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: var(--white);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: clamp(0.75rem, 2vh, 1.25rem);
+  border-top: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.clinic-book-btn.mobile-map-btn {
+  display: none;
+  background-color: var(--dark-green);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1070px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+  
+  .bio-picture {
+    width: clamp(180px, 22vw, 240px);
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .hero-content h1 {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 979px) {
+  .hero-split {
+    flex-direction: column;
+    text-align: center;
+    padding-top: clamp(6rem, 15vmax, 8.125rem);
+    gap: 0;
+  }
+  
+  .hero-content {
+    display: contents;
+  }
+
+  .hero-subtitle { 
+    order: 1; 
+    margin-bottom: 0.125rem;
+  }
+  
+  .hero-content h1 { 
+    order: 2; 
+    font-size: clamp(2rem, 6vw, 2.3rem);
+    margin-top: 0;
+    margin-bottom: clamp(1rem, 3vh, 1.5625rem);
+  }
+
+  .hero-image-container {
+    order: 3;
+    width: 85%;
+    max-width: 31.25rem;
+    margin: 0 auto clamp(0.75rem, 2vh, 1.25rem) auto;
+  }
+
+  .hero-content p { 
+    order: 4; 
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-split .clinic-book-btn {
+    order: 5;
+    width: fit-content;
+    min-width: min(60vw, 15rem);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: clamp(1.25rem, 4vmin, 2.1875rem);
+  }
+
+  .clinic-book-btn {
+    font-size: 1.05rem;
+    padding: 0.85rem 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card {
+    padding: 1.15rem 0.875rem;
+    max-width: min(90vw, 19rem);
+  }
+
+  .pricing-card h3 {
+    font-size: 1.16rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .pricing-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pregnancy-icon {
+    height: 1.65rem;
+    width: auto;
+  }
+  
+  .pricing-list li {
+    padding: 0.4rem 0;
+    font-size: 0.85rem;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bio-picture {
+    float: left;
+    width: clamp(75px, 15vw, 100px);
+    margin: 0.3rem 1rem 0.5rem 0;
+  }
+  
+  #about .section-title,
+  .about-subtitle {
+    text-align: left;
+  }
+}
+
+@media (max-width: 950px) {
+  .section {
+    padding: clamp(2.3rem, 8vh, 5rem) clamp(2vw, 5vmin, 5vw);
+  }
+}
+
+@media (max-width: 802px) {
+  .desktop-map-btn {
+    display: none !important;
+  }
+  
+  .location-container {
+    flex-direction: column;
+  }
+
+  .clinic-book-btn.mobile-map-btn {
+    display: block !important;
+    margin-top: 1.25rem !important;
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+    width: min(100%, 16rem) !important;
+  }
+
+  iframe {
+    min-height: 13rem;
+  }
+}
+
+@media (max-width: 658px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-card {
+    max-width: min(95vw, 25rem);
+    padding: 1.4rem 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .pricing-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pregnancy-icon {
+    height: 2.2rem;
+    width: auto;
+  }
+  
+  .pricing-list li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2rem);
+  }
+  .hero {
+    padding: clamp(4rem, 12vh, 6.25rem) 5vw clamp(2rem, 8vh, 3.125rem) 5vw;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: left;
+  }
+  .social-links {
+    align-items: flex-start;
+  }
+  
+  .pricing-grid,
+  .services-grid {
+    gap: clamp(1.875rem, 6vw, 3.125rem);
+  }
+
+  #about {
+    padding: clamp(0.75rem, 3vw, 1rem) clamp(1rem, 4vw, 1.25rem) clamp(1.25rem, 5vw, 2.5rem);
+    width: min(95vw, 30rem);
+    margin-top: clamp(3rem, 10vh, 5rem);
+  }
+  
+  .about-content h3 {
+    margin-top: clamp(1.5rem, 5vh, 2.1875rem);
+  }
+}
+
+@media (max-width: 500px) {
+  #about {
+    width: 85vw;
+  }
+  
+  .service-card {
+    width: 85vw;
+    max-width: 100%;
+    padding: 1.25rem 1.2rem;
+  }
+
+  .pricing-card {
+    width: 85vw;
+    max-width: 100%;
+    padding: 1.4rem 1.2rem;
+  }
+
+  .location-container {
+    width: 85vw;
+    max-width: 100%;
+    padding: 1.25rem 1.2rem;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+
+  .hero-image-container {
+    width: 85vw;
+  }
+
+  .hero-content p,
+  .hero-content h1 {
+    width: 85vw;
+    margin-inline: auto;
+  }
+
+  .clinic-book-btn {
+    font-size: 0.95rem;
+    padding: 0.9rem 1.55rem;
+  }
+  
+  .hero-split .clinic-book-btn {
+    min-width: min(70vw, 12rem);
+    margin-top: 2.5rem;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .pricing-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pregnancy-icon {
+    height: 1.85rem;
+    width: auto;
+  }
+  
+  .pricing-list li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .clinic-book-btn.mobile-map-btn {
+    width: min(100%, 14rem) !important;
+  }
+
+  iframe {
+    min-height: 17rem;
+  }
+}
