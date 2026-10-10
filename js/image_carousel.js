@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let images = [];
 
     try {
-        const response = await fetch("images.json");
+        const response = await fetch("/images.json");
         if (!response.ok) throw new Error("Network response was not ok");
         images = await response.json();
     } catch (error) {
