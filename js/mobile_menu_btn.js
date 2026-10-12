@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeMenu() {
         nav.classList.remove('mobile-nav');
+        document.body.classList.remove('nav-open');
         menuToggle.classList.remove('is-active');
         menuToggle.setAttribute('aria-expanded', 'false');
         const langSelector = document.getElementById('lang-selector');
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const isOpening = !nav.classList.contains('mobile-nav');
         if (isOpening) {
             nav.classList.add('mobile-nav');
+            document.body.classList.add('nav-open');
             menuToggle.classList.add('is-active');
             menuToggle.setAttribute('aria-expanded', 'true');
             const langSelector = document.getElementById('lang-selector');
