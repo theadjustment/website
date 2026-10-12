@@ -1,0 +1,595 @@
+.tap-cmp-badge {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 990;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  background-color: var(--white, #ffffff);
+  color: var(--dark-green, #095449);
+  border: 1px solid rgba(9, 84, 73, 0.2);
+  border-radius: 9999px;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08), 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.tap-cmp-badge:hover,
+.tap-cmp-badge:focus-visible {
+  background-color: var(--dark-green, #095449);
+  color: var(--white, #ffffff);
+  border-color: var(--dark-green, #095449);
+  box-shadow: 0 0.5rem 1.25rem rgba(9, 84, 73, 0.25);
+  outline: none;
+}
+
+.tap-cmp-badge svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.tap-cmp-badge:hover svg {
+  fill: currentColor;
+}
+
+@media (max-width: 640px) {
+  .tap-cmp-badge span {
+    display: none;
+  }
+
+  .tap-cmp-badge {
+    padding: 0.65rem;
+    border-radius: 50%;
+  }
+}
+
+body.nav-open .tap-cmp-badge,
+body:has(.mobile-nav) .tap-cmp-badge {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.tap-cmp-banner-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  animation: tapCmpFadeIn 0.35s ease-out;
+}
+
+.tap-cmp-banner {
+  pointer-events: auto;
+  max-width: 58rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(9, 84, 73, 0.18);
+  border-radius: 1.125rem;
+  box-shadow: 0 1.25rem 2.5rem -0.5rem rgba(9, 84, 73, 0.22),
+    0 0.5rem 1rem -0.25rem rgba(0, 0, 0, 0.08);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  box-sizing: border-box;
+  animation: tapCmpSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tap-cmp-banner-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.65rem;
+  text-align: left;
+}
+
+.tap-cmp-banner-title {
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  font-weight: 700;
+  color: var(--dark-green, #095449);
+  margin: 0;
+  text-align: left;
+}
+
+.tap-cmp-banner-text {
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 1.25rem 0;
+}
+
+.tap-cmp-banner-text a {
+  color: var(--dark-green, #095449);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.tap-cmp-banner-text a:hover {
+  color: var(--primary-green, #098d7d);
+}
+
+.tap-cmp-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+
+.tap-cmp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tap-cmp-btn-primary {
+  background-color: var(--dark-green, #095449);
+  color: var(--white, #ffffff);
+  border-color: var(--dark-green, #095449);
+  box-shadow: 0 0.25rem 0.5rem rgba(9, 84, 73, 0.2);
+}
+
+.tap-cmp-btn-primary:hover,
+.tap-cmp-btn-primary:focus-visible {
+  background-color: var(--primary-green, #098d7d);
+  border-color: var(--primary-green, #098d7d);
+}
+
+.tap-cmp-btn-secondary {
+  background-color: transparent;
+  color: var(--dark-green, #095449);
+  border-color: rgba(9, 84, 73, 0.3);
+}
+
+.tap-cmp-btn-secondary:hover,
+.tap-cmp-btn-secondary:focus-visible {
+  background-color: rgba(9, 84, 73, 0.08);
+  border-color: var(--dark-green, #095449);
+  color: var(--dark-green, #095449);
+}
+
+.tap-cmp-btn-ghost {
+  background-color: transparent;
+  color: #555555;
+  border-color: transparent;
+  padding: 0.65rem 0.85rem;
+}
+
+.tap-cmp-btn-ghost:hover,
+.tap-cmp-btn-ghost:focus-visible {
+  color: var(--dark-green, #095449);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 640px) {
+  .tap-cmp-banner-wrapper {
+    padding: 0.75rem;
+  }
+
+  .tap-cmp-banner {
+    padding: 1.15rem;
+  }
+
+  .tap-cmp-banner-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .tap-cmp-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.tap-cmp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background-color: rgb(96 96 96 / 45%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: tapCmpFadeIn 0.25s ease-out;
+  box-sizing: border-box;
+}
+
+.tap-cmp-modal {
+  background: var(--white, #ffffff);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(9, 84, 73, 0.15);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.25);
+  max-width: 44rem;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: tapCmpScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.tap-cmp-modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #faf9f5;
+}
+
+.tap-cmp-modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--dark-green, #095449);
+  font-weight: 700;
+}
+
+.tap-cmp-modal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.tap-cmp-modal-close:hover,
+.tap-cmp-modal-close:focus-visible {
+  background: rgba(0, 0, 0, 0.08);
+  color: var(--dark-green, #095449);
+  outline: none;
+}
+
+.tap-cmp-modal-close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.tap-cmp-modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.tap-cmp-modal-intro {
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.tap-cmp-category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tap-cmp-category {
+  border: 1px solid rgba(9, 84, 73, 0.14);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.tap-cmp-category:hover {
+  border-color: rgba(9, 84, 73, 0.3);
+}
+
+.tap-cmp-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tap-cmp-category-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tap-cmp-category-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-green, #095449);
+  margin: 0;
+}
+
+.tap-cmp-badge-tag {
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  background-color: #e8f4f2;
+  color: var(--dark-green, #095449);
+}
+
+.tap-cmp-category-desc {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #5a5a5a;
+  margin: 0;
+}
+
+.tap-cmp-category-details {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  font-size: 0.8125rem;
+  color: #777;
+}
+
+.tap-cmp-switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.65rem;
+  flex-shrink: 0;
+}
+
+.tap-cmp-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.tap-cmp-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #d1d5db;
+  transition: 0.25s ease;
+  border-radius: 9999px;
+}
+
+.tap-cmp-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+  background-color: white;
+  transition: 0.25s ease;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tap-cmp-switch input:checked+.tap-cmp-slider {
+  background-color: var(--primary-green, #098d7d);
+}
+
+.tap-cmp-switch input:checked+.tap-cmp-slider:before {
+  transform: translateX(1.35rem);
+}
+
+.tap-cmp-switch input:disabled+.tap-cmp-slider {
+  background-color: var(--dark-green, #095449);
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.tap-cmp-switch input:focus-visible+.tap-cmp-slider {
+  outline: 2px solid var(--primary-green, #098d7d);
+  outline-offset: 2px;
+}
+
+.tap-cmp-modal-footer {
+  padding: 1.15rem 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background-color: #faf9f5;
+  flex-wrap: wrap;
+}
+
+.tap-cmp-modal-footer-actions {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .tap-cmp-modal {
+    max-height: 94vh;
+  }
+
+  .tap-cmp-modal-body {
+    padding: 1rem;
+  }
+
+  .tap-cmp-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tap-cmp-modal-footer-actions {
+    flex-direction: column;
+  }
+
+  .tap-cmp-modal-footer .tap-cmp-btn {
+    width: 100%;
+  }
+}
+
+.map-blocked-placeholder {
+  width: 100%;
+  min-height: 18rem;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f3e9 0%, #e9e5d4 100%);
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(9, 84, 73, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-blocked-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image: radial-gradient(var(--dark-green) 1px, transparent 1px);
+  background-size: 16px 16px;
+  pointer-events: none;
+}
+
+.map-blocked-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(9, 84, 73, 0.15);
+  border-radius: 1rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  max-width: 32rem;
+  box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.06);
+}
+
+.map-blocked-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--primary-green, #098d7d);
+  margin-bottom: 0.75rem;
+}
+
+.map-blocked-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark-green, #095449);
+  margin: 0 0 0.5rem 0;
+}
+
+.map-blocked-text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: #555555;
+  margin: 0 0 1.25rem 0;
+}
+
+.map-blocked-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.map-blocked-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  background-color: var(--dark-green, #095449);
+  color: var(--white, #ffffff);
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0.25rem 0.5rem rgba(9, 84, 73, 0.2);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.map-blocked-btn:hover,
+.map-blocked-btn:focus-visible {
+  background-color: var(--primary-green, #098d7d);
+}
+
+.map-blocked-external-link {
+  font-size: 0.8125rem;
+  color: var(--dark-green, #095449);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.map-blocked-external-link:hover {
+  color: var(--primary-green, #098d7d);
+}
+
+@keyframes tapCmpFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tapCmpSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tapCmpScaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

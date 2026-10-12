@@ -1,0 +1,329 @@
+.legal-main {
+  padding: clamp(6.5rem, 14vh, 9rem) 5vw clamp(3rem, 6vh, 5rem) 5vw;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+.legal-header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vh, 3.5rem);
+}
+
+.legal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(9, 84, 73, 0.1);
+  color: var(--dark-green);
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.legal-badge svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.legal-title {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  color: var(--dark-green);
+  margin: 0 0 0.85rem 0;
+  line-height: 1.2;
+}
+
+.legal-meta {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.legal-toc {
+  background-color: var(--white);
+  border: 1px solid rgba(9, 84, 73, 0.15);
+  border-radius: 0.875rem;
+  padding: clamp(1.25rem, 3vw, 1.75rem);
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
+}
+
+.legal-toc-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin: 0 0 1rem 0;
+}
+
+.legal-toc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0.5rem 1.5rem;
+}
+
+.legal-toc-list li a {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-size: 0.925rem;
+  display: inline-block;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.legal-toc-list li a:hover {
+  color: var(--primary-green);
+}
+
+.legal-content {
+  background-color: var(--white);
+  border: 1px solid rgba(9, 84, 73, 0.12);
+  border-radius: 1.125rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.03);
+}
+
+.legal-section {
+  margin-bottom: clamp(2rem, 4vh, 2.75rem);
+  scroll-margin-top: 6.5rem;
+}
+
+.legal-section:last-child {
+  margin-bottom: 0;
+}
+
+.legal-section h2 {
+  font-size: clamp(1.35rem, 2.5vw, 1.65rem);
+  color: var(--dark-green);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(9, 84, 73, 0.12);
+}
+
+.legal-section h3 {
+  font-size: 1.15rem;
+  color: var(--dark-green);
+  margin-top: 1.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.legal-section p,
+.legal-section li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #3f3f3f;
+}
+
+.legal-section ul,
+.legal-section ol {
+  padding-left: 1.5rem;
+  margin-top: 0.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.legal-section li {
+  margin-bottom: 0.45rem;
+}
+
+.legal-section a {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.legal-section a:hover {
+  color: var(--primary-green);
+}
+
+.legal-callout {
+  background-color: #f7f6f0;
+  border-left: 4px solid var(--primary-green);
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.legal-callout-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.legal-callout-header svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--primary-green);
+  flex-shrink: 0;
+}
+
+.legal-callout-header svg path {
+  fill: var(--primary-green);
+}
+
+.legal-callout p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #444;
+}
+
+.legal-identity-card {
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f2 100%);
+  border: 1px solid rgba(9, 84, 73, 0.2);
+  border-radius: 0.875rem;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.legal-identity-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.legal-identity-label {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #777;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.legal-identity-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-green);
+}
+
+.legal-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(9, 84, 73, 0.15);
+  border-radius: 0.75rem;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.legal-table th {
+  background-color: #faf9f4;
+  color: var(--dark-green);
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(9, 84, 73, 0.15);
+  white-space: nowrap;
+}
+
+.legal-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: #444;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+.legal-table tr:nth-child(even) td {
+  background-color: #faf9f7;
+}
+
+.cookie-name-code {
+  display: inline-block;
+  background-color: rgba(9, 84, 73, 0.08);
+  color: var(--dark-green);
+  font-family: monospace;
+  font-size: 0.875rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+}
+
+.cookie-manage-banner {
+  background: linear-gradient(135deg, var(--dark-green) 0%, #0c7467 100%);
+  color: var(--white);
+  border-radius: 0.875rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cookie-manage-text h3 {
+  color: var(--white);
+  margin: 0 0 0.35rem 0;
+  font-size: 1.15rem;
+}
+
+.cookie-manage-text p {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  font-size: 0.925rem;
+}
+
+.cookie-manage-btn {
+  background-color: var(--white);
+  color: var(--dark-green);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
+.cookie-manage-btn:hover {
+  background-color: #f2efe4;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+}
+
+
+
+@media print {
+
+  .navbar,
+  .tap-cmp-badge,
+  .tap-cmp-banner-wrapper,
+  .tap-cmp-modal-overlay,
+  .cookie-manage-banner {
+    display: none !important;
+  }
+
+  .legal-main {
+    padding: 0 !important;
+  }
+
+  .legal-content {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+}
